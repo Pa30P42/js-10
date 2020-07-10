@@ -6,7 +6,7 @@ import { getTotal } from '../cart/cart';
 
 export const cartModal = () => {
   const markup = template(cart.order);
-  console.log(markup);
+  // console.log(markup);
   const instance = basicLightbox.create(
     `
     <div class="modal">
@@ -58,13 +58,4 @@ export const cartModal = () => {
     console.log(cart);
   };
   document.querySelector('.orderList').addEventListener('click', removeDish);
-  //   const templateModal = document.querySelector('#modal');
-  //   const instance = basicLightbox.create(templateModal, {
-  //     onShow: instance => {
-  //       instance.element().querySelector('.modalBtn').onclick = instance.close;
-  //     },
-  //   });
-  //   instance.show();
-  //   const cartList = templateModal.querySelector('.order-list');
-  //   console.log(cartList);
 };
