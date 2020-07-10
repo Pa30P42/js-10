@@ -37,12 +37,12 @@ export const addToCart = dish => {
   getTotal();
 };
 
-const removeFromCart = id => {
+export const removeFromCart = id => {
   cart.order = cart.order.filter(dish => dish.id !== id);
-  getTotal();
+  // getTotal();
 };
 
-const getTotal = () => {
+export const getTotal = () => {
   cart.totalSum = cart.order.reduce((acc, dish) => {
     acc += dish.price * dish.quantity;
     return acc;
