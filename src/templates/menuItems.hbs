@@ -1,9 +1,9 @@
 {{#each this}}
 
-<li class="menu__item">
+<li class="menu__item" data-id="{{id}}">
     <div class="card">
         <img src="{{image}}" alt="{{name}}" height="300">
-        <div class="card__content" data-id="{{id}}">
+        <div class="card__content">
             <h2 class="card__name">{{name}}</h2>
             <p class="card__price">
                 <i class="material-icons">
@@ -18,7 +18,7 @@
                 {{/each}}
             </ul>
         </div>
-        <button class="card__button button">
+        <button class="card__button button" data-btn="cartBtn">
             <i class="material-icons button__icon">
                 shopping_cart
             </i>
